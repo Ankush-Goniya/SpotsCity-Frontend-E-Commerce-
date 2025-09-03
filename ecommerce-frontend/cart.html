@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | SportsCity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="js/include.js"></script>
+  <script src="js/cart.js" defer></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Cart Section -->
+  <section class="pt-28 px-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">Your Cart</h2>
+    <div id="cartContainer" class="space-y-4"></div>
+    <div class="mt-6 flex justify-between items-center">
+      <h3 id="cartTotal" class="text-xl font-semibold">Total: ₹0</h3>
+      <!-- <button id="checkoutBtn" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+        Proceed to Checkout
+      </button> -->
+
+   <a id="proceedBtn" href="checkout.html"
+   class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 inline-block text-center ">
+   Proceed For Order
+</a>
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    loadComponent("navbar", "components/navbar.html");
+    loadComponent("footer", "components/footer.html");
+  </script>
+</body>
+</html>

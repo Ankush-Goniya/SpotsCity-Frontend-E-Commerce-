@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | SportsCity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="js/include.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Checkout Section -->
+  <section class="pt-28 px-6 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">Checkout</h2>
+    
+    <form id="checkoutForm" class="bg-white dark:bg-gray-800 p-6 rounded shadow space-y-4">
+      <input type="text" id="name" placeholder="Full Name" required class="w-full p-2 border rounded">
+      <input type="text" id="address" placeholder="Address" required class="w-full p-2 border rounded">
+      <input type="text" id="phone" placeholder="Phone Number" required class="w-full p-2 border rounded">
+      <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+        Place Order
+      </button>
+    </form>
+
+    <div id="orderMessage" class="mt-6 hidden text-green-600 font-semibold text-lg"></div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    loadComponent("navbar", "components/navbar.html");
+    loadComponent("footer", "components/footer.html");
+
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Get cart data
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      if (cart.length === 0) {
+        alert("❌ Your cart is empty!");
+        return;
+      }
+
+      // Clear cart after order placed
+      localStorage.removeItem("cart");
+
+      // Show confirmation
+      document.getElementById("checkoutForm").classList.add("hidden");
+      document.getElementById("orderMessage").classList.remove("hidden");
+      document.getElementById("orderMessage").textContent = "✅ Order placed successfully! Thank you for shopping with us.";
+    });
+  </script>
+</body>
+</html>

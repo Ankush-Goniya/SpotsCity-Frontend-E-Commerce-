@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between">
+    <h1 class="text-xl font-bold text-blue-600">ShopEase</h1>
+    <ul class="flex gap-6">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="contact.html" class="font-semibold text-blue-500">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Form -->
+  <section class="p-8 max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+    <form onsubmit="return validateForm(event)" class="bg-white p-6 rounded-lg shadow space-y-4">
+      
+      <div>
+        <label class="block font-semibold">Name</label>
+        <input type="text" id="name" class="w-full border rounded px-3 py-2 mt-1 focus:ring focus:ring-blue-300" placeholder="Your Name">
+      </div>
+
+      <div>
+        <label class="block font-semibold">Email</label>
+        <input type="email" id="email" class="w-full border rounded px-3 py-2 mt-1 focus:ring focus:ring-blue-300" placeholder="Your Email">
+      </div>
+
+      <div>
+        <label class="block font-semibold">Subject</label>
+        <input type="text" id="subject" class="w-full border rounded px-3 py-2 mt-1 focus:ring focus:ring-blue-300" placeholder="Subject">
+      </div>
+
+      <div>
+        <label class="block font-semibold">Message</label>
+        <textarea id="message" rows="4" class="w-full border rounded px-3 py-2 mt-1 focus:ring focus:ring-blue-300" placeholder="Your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
