@@ -1,5 +1,8 @@
 # ShopEase - Frontend E-Commerce Website
 
+## 🚀 Live Demo
+click here to view the project :[E:Commerce Website] (https://ankush-goniya.github.io/SpotsCity-Frontend-E-Commerce-/)
+
 Welcome to **ShopEase**, a responsive and modern e-commerce front-end project developed as part of a Web Development Internship. This project demonstrates skills in **HTML, CSS, JavaScript**, and **Tailwind CSS** for building user-friendly, interactive, and responsive web pages.
 
 ---
